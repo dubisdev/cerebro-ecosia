@@ -1,6 +1,5 @@
-# Cerebro-Google
-
-> A Cerebro plugin to look up Google
+# Cerebro-Ecosia
+> A Cerebro plugin to look up Ecosia
 
 ![](screenshot.png)
 
@@ -9,7 +8,7 @@ Type any word you'd like to search!
 
 ## Features
 
-* Get related content suggestions from Google
+* Get related content suggestions from Ecosia
 
 ## Related
 
@@ -18,4 +17,4 @@ Type any word you'd like to search!
 
 ## License
 
-MIT © [Alexandr Subbotin](http://asubbotin.ru)
+MIT © [dubisdev](https://dubis.dev)
