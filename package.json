@@ -1,13 +1,13 @@
 {
-  "name": "cerebro-google",
-  "version": "1.0.1",
-  "description": "Google search plugin from cerebro",
+  "name": "cerebro-ecosia",
+  "version": "1.0.0",
+  "description": "Ecosia search plugin from cerebro",
   "license": "MIT",
-  "repository": "KELiON/cerebro-google",
+  "repository": "dubisdev/cerebro-ecosia",
   "author": {
-    "name": "Alexandr Subbotin",
-    "email": "kelionweb@gmail.com",
-    "url": "asubbotin.ru"
+    "name": "dubisdev",
+    "email": "dubisdev@gmail.com",
+    "url": "dubis.dev"
   },
   "engines": {
     "node": ">=4"
