@@ -1,6 +1,6 @@
 # Cerebro-Ecosia &nbsp; ![npm](https://img.shields.io/npm/v/cerebro-ecosia?color=green)
 
-> A Cerebro plugin to look up Ecosia
+> A Cerebro plugin to Search with Ecosia
 
 ![](screenshot.gif)
 
