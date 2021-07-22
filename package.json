@@ -7,7 +7,7 @@
   "author": {
     "name": "dubisdev",
     "email": "dubisdev@gmail.com",
-    "url": "dubis.dev"
+    "url": "https://dubis.dev"
   },
   "engines": {
     "node": ">=4"
