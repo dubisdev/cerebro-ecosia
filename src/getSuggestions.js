@@ -10,7 +10,7 @@ const getSuggestions = (query) => {
 export default memoize(getSuggestions, {
 	length: false,
 	promise: "then",
-	// Expire translation cache in 30 minutes
-	maxAge: 30 * 60 * 1000,
+	// Expire suggestions cache in 1 minutes
+	maxAge: 60 * 1000,
 	preFetch: true,
 });

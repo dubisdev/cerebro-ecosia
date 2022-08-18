@@ -1,42 +1,35 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { Loading, KeyboardNav, KeyboardNavItem } from "cerebro-ui";
-import Preload from "./Preload";
+import { Loading, KeyboardNav, KeyboardNavItem, Preload } from "@cerebroapp/cerebro-ui";
 import getSuggestions from "../getSuggestions";
-import styles from "./styles.css";
+import styles from "./styles.module.css";
 
-class Preview extends Component {
-	renderSuggestions(suggestions, searchFn) {
-		return (
-			<div className={styles.wrapper}>
-				<KeyboardNav>
-					<ul className={styles.list}>
-						{suggestions.map((s) => (
-							<KeyboardNavItem
-								key={s}
-								tagName={"li"}
-								onSelect={() => searchFn(s)}>
-								{s}
-							</KeyboardNavItem>
-						))}
-					</ul>
-				</KeyboardNav>
-			</div>
-		);
-	}
-	render() {
-		const { query, search } = this.props;
-		return (
-			<Preload promise={getSuggestions(query)} loader={<Loading />}>
-				{(suggestions) => this.renderSuggestions(suggestions || [], search)}
-			</Preload>
-		);
-	}
-}
+const Preview = ({ query, search }) => {
+  return (
+    <Preload promise={getSuggestions(query)} loader={<Loading />}>
+      {(suggestions) => (
+        <Sugestions suggestions={suggestions} searchFn={search} />
+      )}
+    </Preload>
+  );
+};
 
-Preview.propTypes = {
-	query: PropTypes.string.isRequired,
-	search: PropTypes.func.isRequired,
+const Sugestions = ({ suggestions, searchFn }) => {
+  return (
+    <div className={styles.wrapper}>
+      <KeyboardNav>
+        <ul className={styles.list}>
+          {suggestions.map((s) => (
+            <KeyboardNavItem
+              key={s}
+              tagName={"li"}
+              onSelect={() => searchFn(s)}
+            >
+              {s}
+            </KeyboardNavItem>
+          ))}
+        </ul>
+      </KeyboardNav>
+    </div>
+  );
 };
 
 export default Preview;

@@ -1,21 +1,19 @@
-import React from "react";
-
 import Preview from "./Preview";
 import iconPath from "./icon.png";
 
-const id = "search-web";
+const id = "search-ecosia";
 export const order = 10;
 export const icon = iconPath;
 
 /**
- * Search term in google
+ * Search term in ecosia
  *
  * @param  {String} options.term
  * @param  {Object} options.actions
  * @param  {Function} options.display
  */
 export const fn = ({ term, actions, display }) => {
-	var search = (searchTerm) => {
+	const search = (searchTerm) => {
 		const q = encodeURIComponent(searchTerm);
 		actions.open(`https://www.ecosia.org/search?newwindow=1&q=${q}&cad=h`);
 		actions.hideWindow();
